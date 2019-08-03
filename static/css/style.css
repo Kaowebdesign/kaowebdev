@@ -1,0 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  font-family: 'Source Sans Pro', sans-serif !important; }
+
+.container {
+  max-width: 1170px; }
+
+.caption {
+  position: relative; }
+  .caption__text_size_lg {
+    font-size: 2rem; }
+  .caption__text_size_bg {
+    font-size: 5.625rem; }
+  .caption__text_uppercase {
+    text-transform: uppercase; }
+  .caption__text_style_big {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 0 -5px;
+    line-height: 80px;
+    z-index: -1; }
+  .caption__text_color_grey {
+    color: #dadada; }
+
+.noneOutline:active, .noneOutline:focus {
+  outline: none !important; }
+
+.noneOutline::-moz-focus-inner {
+  border: 0 !important; }

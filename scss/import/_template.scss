@@ -1,0 +1,124 @@
+.container {
+    max-width: 1170px;
+}
+
+.caption {
+    position: relative;
+    &__text {
+        &_size_lg {
+            font-size: (32rem / 16);
+        }
+        &_size_bg {
+            font-size: (90rem / 16);
+        }
+        &_uppercase {
+            text-transform: uppercase;
+        }
+        &_style_big {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0 0 0 -5px;
+            line-height: 80px;
+            z-index: -1;
+        }
+        &_color {
+            &_grey {
+                color: #dadada;
+            }
+        }
+    }
+}
+
+.noneOutline {
+    &:active,
+    &:focus {
+        outline: none !important;
+    }
+    &::-moz-focus-inner {
+        border: 0 !important;
+    }
+}
+
+%nullLink {
+    text-decoration: none;
+    &:hover {
+        text-decoration: initial;
+    }
+}
+
+%nullList {
+    list-style: none;
+}
+
+%nullInputs {
+    outline: none;
+}
+
+%baseFlex {
+    display: flex;
+}
+
+%columnFlex {
+    flex-direction: column;
+}
+
+%flexFullCenter {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+%justifyCenter {
+    justify-content: center;
+}
+
+%alignCenter {
+    align-items: center;
+}
+
+%textCenter {
+    text-align: center;
+}
+
+%basePos {
+    position: relative;
+    z-index: 1;
+}
+
+%absolutePos {
+    position: absolute;
+}
+
+%marginCenter {
+    margin: 0 auto;
+}
+
+%baseTransition {
+    transition: .5s;
+}
+
+%fullAbsolute {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+%robotoBase {
+    font-family: 'Roboto', sans-serif;
+}
+
+%robotoRegular {
+    font-weight: 400;
+}
+
+%robotoBold {
+    font-weight: 600;
+}
+
+%freedokaFont {
+    font-family: 'Fredoka One', cursive;
+}
