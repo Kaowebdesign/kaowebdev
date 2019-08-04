@@ -9,6 +9,9 @@
                 {{ partial "nav.html" . }}
             </nav>
             {{ block "main" . }}{{ end }}
+            <div>
+                {{ partial "menu.html" . }}
+            </div>
         </main>
     </div>
     {{ partial "scripts.html" . }}

@@ -4,8 +4,27 @@
     left: 0;
     width: 110px;
     height: 100vh;
+    z-index: 120;
     &:hover .mainNav__back {
         transform: rotateX(0deg);
+    }
+    &:hover .burgerMenu__item_two,
+    &:hover .burgerMenu__item_three {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    &:hover .burgerMenu__item_one {
+        transform: rotate(48deg);
+    }
+    &:hover .burgerMenu__item_for {
+        transform: rotate(-48deg);
+    }
+    &:hover .mainNav__menuText {
+        transform: scale(0);
+        opacity: 0;
+    }
+    &:hover .mainNav__openText {
+        transform: rotateX(0deg) translateX(-50%);
     }
     &__back {
         @extend %fullAbsolute;
@@ -21,15 +40,101 @@
         color: $basicBlack;
         text-transform: uppercase;
         word-wrap: break-word;
+        transition: .6s;
+    }
+    &__openText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        transform: rotateX(90deg) translateX(-50%);
     }
 }
 
 .burgerMenu {
+    width: 35px;
+    height: 35px;
     &__item {
         display: block;
         width: 35px;
         height: 1px;
         background-color: $basicBlue;
         margin: 8px 0;
+        transition: .6s;
+    }
+}
+
+.logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    &_absolute {
+        @extend %absolutePos;
+        &:hover {
+            text-decoration: none;
+        }
+        &:hover .logo__text {
+            color: $basicBlue;
+        }
+        &:hover .logo__item {
+            background: $basicBlue;
+        }
+    }
+    &_pos_top {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__text {
+        font-weight: 300;
+        font-size: (16rem / 16);
+        letter-spacing: 3px;
+        color: $basicBlue;
+        transition: .6s;
+    }
+    &__item {
+        width: 50px;
+        height: 1px;
+        background: $basicBlue;
+        transition: .6s;
+        &_one {
+            transform: rotate(90deg) translate(30px, 20px);
+        }
+        &_two {
+            width: 36px;
+            transform: rotate(45deg) translate(37px, 21px);
+        }
+        &_three {
+            transform: rotate(135deg) translate(16px, -13px);
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $secondGrey;
+    z-index: 100;
+    padding: 30px 110px;
+    &__wrap {
+        background: $basicWhite;
+        width: 100%;
+        height: 100%;
+    }
+    &__list {
+        list-style-type: none;
+    }
+    &__link {
+        color: $basicBlack;
+        text-transform: uppercase;
+        font-size: (42rem / 16);
+    }
+    &__item {
+        display: block;
+        width: 33.3%;
+        min-height: 50%;
     }
 }

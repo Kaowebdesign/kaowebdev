@@ -21,6 +21,18 @@
             color: $basicGrey;
             line-height: 1.86;
         }
+        &_style_small {
+            font-size: (10rem / 16);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        &_color_grey {
+            color: $basicGrey;
+        }
+        &_color_blue {
+            color: $basicBlue;
+        }
     }
     &__description {
         max-height: 200px;
@@ -62,11 +74,22 @@
         color: $basicWhite;
         font-size: (16rem / 16);
     }
-    &__text {
-        font-size: (10rem / 16);
-        text-transform: uppercase;
-        color: $basicGrey;
-        font-weight: 600;
-        letter-spacing: 2px;
+}
+
+.more {
+    @extend %absolutePos;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    &::after {
+        content: "";
+        @extend %absolutePos;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        display: block;
+        width: 1px;
+        height: 35px;
+        background: $basicBlue;
     }
 }

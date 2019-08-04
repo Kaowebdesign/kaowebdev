@@ -27,48 +27,48 @@ DefaultContentLanguage = "en"
         LanguageName = "en"
         weight = 1
         
-# russian menu
-#     [[languages.ru.menu.nav]]
-#         identifier = "home"
-#         name= "Главная"
-#         url = "/"
-#         weight = 1
-#     [[languages.ru.menu.nav]]
-#         identifier = "about"
-#         name= "О мне"
-#         url = "/about"
-#         weight = 2
-#     [[languages.ru.menu.nav]]
-#         identifier = "projects"
-#         name= "Проекты"
-#         url = "/solution"
-#         weight = 3
-#     [[languages.ru.menu.nav]]
-#         identifier = "contacts"
-#         name= "Контакты"
-#         url = "/contact"
-#         weight = 4
-# # english menu
-#     [[languages.en.menu.nav]]
-#         identifier = "home"
-#         name= "Home"
-#         url = "/"
-#         weight = 1
-#     [[languages.en.menu.nav]]
-#         identifier = "about"
-#         name= "About"
-#         url = "/about"
-#         weight = 2
-#     [[languages.en.menu.nav]]
-#         identifier = "projects"
-#         name= "Projects"
-#         url = "/solution"
-#         weight = 3
-#     [[languages.en.menu.nav]]
-#         identifier = "contacts"
-#         name= "Contact"
-#         url = "/contact"
-#         weight = 4
+#russian menu
+    [[languages.ru.menu.nav]]
+        identifier = "home"
+        name= "Главная"
+        url = "/"
+        weight = 1
+    [[languages.ru.menu.nav]]
+        identifier = "about"
+        name= "О мне"
+        url = "/about"
+        weight = 2
+    [[languages.ru.menu.nav]]
+        identifier = "projects"
+        name= "Проекты"
+        url = "/solution"
+        weight = 3
+    [[languages.ru.menu.nav]]
+        identifier = "contacts"
+        name= "Контакты"
+        url = "/contact"
+        weight = 4
+# english menu
+    [[languages.en.menu.nav]]
+        identifier = "home"
+        name= "Home"
+        url = "/"
+        weight = 1
+    [[languages.en.menu.nav]]
+        identifier = "about"
+        name= "About"
+        url = "/about"
+        weight = 2
+    [[languages.en.menu.nav]]
+        identifier = "projects"
+        name= "Projects"
+        url = "/solution"
+        weight = 3
+    [[languages.en.menu.nav]]
+        identifier = "contacts"
+        name= "Contact"
+        url = "/contact"
+        weight = 4
         
 
 
