@@ -6,25 +6,31 @@
     position: relative;
     &__text {
         &_size_lg {
-            font-size: (32rem / 16);
+            font-size: (40rem / 16);
         }
         &_size_bg {
-            font-size: (90rem / 16);
+            font-size: (100rem / 16);
         }
         &_uppercase {
             text-transform: uppercase;
+        }
+        &_style_lite {
+            font-weight: 300;
+            letter-spacing: 4px;
         }
         &_style_big {
             position: absolute;
             bottom: 0;
             left: 0;
-            margin: 0 0 0 -5px;
             line-height: 80px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 5px;
             z-index: -1;
         }
         &_color {
             &_grey {
-                color: #dadada;
+                color: #f4f4f4;
             }
         }
     }

@@ -5,6 +5,9 @@
 <body>
     <div class="wrapper">
         <main id="main" class="main-wrap">
+            <nav>
+                {{ partial "nav.html" . }}
+            </nav>
             {{ block "main" . }}{{ end }}
         </main>
     </div>

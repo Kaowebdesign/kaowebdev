@@ -1,0 +1,35 @@
+.mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100vh;
+    &:hover .mainNav__back {
+        transform: rotateX(0deg);
+    }
+    &__back {
+        @extend %fullAbsolute;
+        background: $secondGrey;
+        z-index: -1;
+        transform: rotateX(90deg);
+        transition: .6s ease-in;
+    }
+    &__wrap {
+        @extend %nullLink;
+    }
+    &__text {
+        color: $basicBlack;
+        text-transform: uppercase;
+        word-wrap: break-word;
+    }
+}
+
+.burgerMenu {
+    &__item {
+        display: block;
+        width: 35px;
+        height: 1px;
+        background-color: $basicBlue;
+        margin: 8px 0;
+    }
+}

@@ -13,12 +13,13 @@ html {
 body {
     font-size: 16px;
     min-width: 320px;
-    font-family: 'Source Sans Pro', sans-serif !important;
+    font-family: 'Hind Vadodara', sans-serif !important;
 }
 
 @import "import/vars";
 @import "import/mixins";
 @import "import/header";
+@import "import/nav";
 @import "import/main";
 @import "import/footer";
 @import "import/override";

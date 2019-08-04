@@ -1,0 +1,72 @@
+.main {
+    &__wrap {
+        width: 100%;
+        height: 100vh;
+        padding-left: 110px;
+    }
+    &__img-wrap {
+        max-width: 680px;
+        width: 100%;
+        padding-top: 55%;
+        background: yellow;
+        box-shadow: 9px 8px 20px rgba(0, 0, 0, 0.08);
+        @include backImg('../images/imac.jpg', cover, center);
+    }
+    &__text {
+        &_size_md {
+            font-size: (18rem / 16);
+        }
+        &_style_light {
+            font-weight: 300;
+            color: $basicGrey;
+            line-height: 1.86;
+        }
+    }
+    &__description {
+        max-height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        overflow: -moz-scrollbars-none;
+        scrollbar-width: none;
+        &_grad {
+            @extend %basePos;
+            cursor: n-resize;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 60px;
+                background: linear-gradient(180deg, rgba(255, 202, 255, 0.1), rgba(255, 255, 255, 1) 100%);
+            }
+        }
+    }
+}
+
+.callMe {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    &__phone {
+        @extend %baseFlex;
+        @extend %flexFullCenter;
+        width: 48px;
+        height: 48px;
+        background: $basicBlue;
+        color: $basicWhite;
+        font-size: (16rem / 16);
+    }
+    &__text {
+        font-size: (10rem / 16);
+        text-transform: uppercase;
+        color: $basicGrey;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+}
