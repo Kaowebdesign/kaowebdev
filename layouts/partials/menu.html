@@ -1,11 +1,11 @@
 <div class="menu">
     <div class="menu__wrap d-flex align-items-center">
-        <div class="container">
-            <div class="row">
+        <div class="container fullHeight">
+            <div class="row fullHeight">
                 <div class="col">
-                    <ul class="menu__list d-flex flex-wrap align-items-around">
+                    <ul class="menu__list d-flex flex-wrap align-items-around fullHeight">
                         {{ range .Site.Menus.nav }}
-                        <li class="menu__item text-center py-5">
+                        <li class="menu__item text-center py-5 d-flex justify-content-center align-items-center">
                             <a class="menu__link menu_hoverLink" href="{{ .URL }}">{{ .Name | safeHTML }}</a>
                         </li>
                         {{ end }}

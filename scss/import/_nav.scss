@@ -125,16 +125,70 @@
         height: 100%;
     }
     &__list {
+        @extend %basePos;
         list-style-type: none;
     }
     &__link {
+        position: relative;
         color: $basicBlack;
         text-transform: uppercase;
-        font-size: (42rem / 16);
+        font-size: (32rem / 16);
+        transition: color .6s;
+        &:hover {
+            text-decoration: none;
+            color: $basicBlue;
+        }
+        &:hover::after {
+            transform: translate(-50%, -50%) rotateY(0deg);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateY(90deg);
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: $basicBlue;
+            transition: transform .6s;
+        }
+    }
+    &__letter {
+        font-size: (100rem / 16);
     }
     &__item {
+        position: relative;
         display: block;
         width: 33.3%;
         min-height: 50%;
+        &:hover::after {
+            text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            font-size: 200px;
+            z-index: -1;
+            color: $basicWhite;
+            text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.11);
+            transition: .6s;
+        }
+        &:first-child::after {
+            content: "H";
+        }
+        &:nth-child(2)::after {
+            content: "A";
+        }
+        &:nth-child(3)::after {
+            content: "P";
+        }
+        &:nth-child(4)::after {
+            content: "C";
+        }
     }
 }

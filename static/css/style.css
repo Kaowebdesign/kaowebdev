@@ -137,13 +137,65 @@ body {
   .menu__list {
     list-style-type: none; }
   .menu__link {
+    position: relative;
     color: #000000;
     text-transform: uppercase;
-    font-size: 2.625rem; }
+    font-size: 2rem;
+    -webkit-transition: color .6s;
+    transition: color .6s; }
+    .menu__link:hover {
+      text-decoration: none;
+      color: #78bbb3; }
+    .menu__link:hover::after {
+      -webkit-transform: translate(-50%, -50%) rotateY(0deg);
+              transform: translate(-50%, -50%) rotateY(0deg); }
+    .menu__link::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) rotateY(90deg);
+              transform: translate(-50%, -50%) rotateY(90deg);
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #78bbb3;
+      -webkit-transition: -webkit-transform .6s;
+      transition: -webkit-transform .6s;
+      transition: transform .6s;
+      transition: transform .6s, -webkit-transform .6s; }
+  .menu__letter {
+    font-size: 6.25rem; }
   .menu__item {
+    position: relative;
     display: block;
     width: 33.3%;
     min-height: 50%; }
+    .menu__item:hover::after {
+      text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2); }
+    .menu__item::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      display: block;
+      font-size: 200px;
+      z-index: -1;
+      color: #ffffff;
+      text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.11);
+      -webkit-transition: .6s;
+      transition: .6s; }
+    .menu__item:first-child::after {
+      content: "H"; }
+    .menu__item:nth-child(2)::after {
+      content: "A"; }
+    .menu__item:nth-child(3)::after {
+      content: "P"; }
+    .menu__item:nth-child(4)::after {
+      content: "C"; }
 
 .main__wrap {
   width: 100%;
@@ -268,6 +320,10 @@ body {
 .noneOutline::-moz-focus-inner {
   border: 0 !important; }
 
+.fullHeight {
+  width: 100%;
+  height: 100%; }
+
 .mainNav__wrap {
   text-decoration: none; }
   .mainNav__wrap:hover {
@@ -291,7 +347,7 @@ body {
           align-items: center;
   z-index: 2; }
 
-.main__description_grad {
+.menu__list, .main__description_grad {
   position: relative;
   z-index: 1; }
 
