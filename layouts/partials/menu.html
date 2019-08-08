@@ -1,17 +1,11 @@
-<div class="menu">
+<div class="menu" id="menu">
     <div class="menu__wrap d-flex align-items-center">
-        <div class="container fullHeight">
-            <div class="row fullHeight">
-                <div class="col">
-                    <ul class="menu__list d-flex flex-wrap align-items-around fullHeight">
-                        {{ range .Site.Menus.nav }}
-                        <li class="menu__item text-center py-5 d-flex justify-content-center align-items-center">
-                            <a class="menu__link menu_hoverLink" href="{{ .URL }}">{{ .Name | safeHTML }}</a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <ul class="menu__list d-flex flex-wrap align-items-around fullHeight m-0">
+            {{ range .Site.Menus.nav }}
+            <li class="menu__item text-center py-5 d-flex justify-content-center align-items-center">
+                <a class="menu__link menu_hoverLink" href="{{ .URL }}">{{ .Name | safeHTML }}</a>
+            </li>
+            {{ end }}
+        </ul>
     </div>
 </div>

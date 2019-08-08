@@ -113,16 +113,25 @@
 .menu {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
     background: $secondGrey;
     z-index: 100;
     padding: 30px 110px;
+    transition: .8s ease-in-out;
+    &_active {
+        left: 0;
+    }
     &__wrap {
         background: $basicWhite;
         width: 100%;
         height: 100%;
+        transition: .6s;
+        transform: rotateY(90deg);
+        &_active {
+            transform: rotateY(0deg);
+        }
     }
     &__list {
         @extend %basePos;
@@ -133,10 +142,11 @@
         color: $basicBlack;
         text-transform: uppercase;
         font-size: (32rem / 16);
-        transition: color .6s;
+        transition: .6s;
         &:hover {
             text-decoration: none;
             color: $basicBlue;
+            transform: scale(1.1);
         }
         &:hover::after {
             transform: translate(-50%, -50%) rotateY(0deg);
