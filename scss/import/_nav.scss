@@ -26,6 +26,16 @@
     &:hover .mainNav__openText {
         transform: rotateX(0deg) translateX(-50%);
     }
+    &_active {
+        .mainNav__menuText,
+        .mainNav__openText {
+            transform: scale(0);
+            opacity: 0;
+        }
+        .mainNav__closeText {
+            transform: rotateX(0deg) translateX(-50%);
+        }
+    }
     &__back {
         @extend %fullAbsolute;
         background: $secondGrey;
@@ -49,6 +59,13 @@
         display: block;
         transform: rotateX(90deg) translateX(-50%);
     }
+    &__closeText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        transform: rotateX(90deg) translateX(-50%);
+    }
 }
 
 .burgerMenu {
@@ -61,6 +78,19 @@
         background-color: $basicBlue;
         margin: 8px 0;
         transition: .6s;
+    }
+    &_active {
+        .burgerMenu__item_one {
+            transform: rotate(48deg) translate(12px, 12px) !important;
+        }
+        .burgerMenu__item_for {
+            transform: rotate(-48deg) translate(7px, -7px) !important;
+        }
+        .burgerMenu__item_two,
+        .burgerMenu__item_three {
+            transform: translateX(-50px) !important;
+            opacity: 0;
+        }
     }
 }
 
@@ -128,9 +158,14 @@
         width: 100%;
         height: 100%;
         transition: .6s;
-        transform: rotateY(90deg);
+        will-change: transform;
+        transform: translateX(calc(-100% - 110px));
         &_active {
-            transform: rotateY(0deg);
+            animation-name: showElement;
+            animation-duration: 1.3s;
+            animation-delay: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
     }
     &__list {
@@ -200,5 +235,15 @@
         &:nth-child(4)::after {
             content: "C";
         }
+    }
+}
+
+.socials {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    &__link {
+        color: $basicBlue;
     }
 }
