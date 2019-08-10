@@ -250,6 +250,19 @@ body {
       content: "P"; }
     .menu__item:nth-child(4)::after {
       content: "C"; }
+  .menu__back {
+    overflow: hidden; }
+    .menu__back_line {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: #f2f2f2; }
+      .menu__back_line:first-child {
+        left: 33.33%; }
+      .menu__back_line:last-child {
+        right: 33.33%; }
 
 .socials {
   position: absolute;
@@ -409,6 +422,10 @@ body {
   .mainNav__wrap:hover {
     text-decoration: initial; }
 
+.menu__back {
+  list-style: none;
+  list-style-type: none; }
+
 .callMe__phone {
   display: -webkit-box;
   display: -webkit-flex;
@@ -434,7 +451,7 @@ body {
 .logo_absolute, .more, .more::after {
   position: absolute; }
 
-.mainNav__back {
+.mainNav__back, .menu__back {
   position: absolute;
   top: 0;
   bottom: 0;

@@ -236,6 +236,25 @@
             content: "C";
         }
     }
+    &__back {
+        @extend %fullAbsolute;
+        @extend %nullList;
+        overflow: hidden;
+        &_line {
+            position: absolute;
+            top: 0;
+            display: block;
+            width: 1px;
+            height: 100%;
+            background: $secondGrey;
+            &:first-child {
+                left: 33.33%;
+            }
+            &:last-child {
+                right: 33.33%
+            }
+        }
+    }
 }
 
 .socials {
