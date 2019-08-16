@@ -135,3 +135,13 @@
 %freedokaFont {
     font-family: 'Fredoka One', cursive;
 }
+
+%navText {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    display: block;
+    color: $basicBlack;
+    transition: .6s;
+    text-transform: uppercase;
+}

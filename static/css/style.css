@@ -43,17 +43,25 @@ body {
             transform: scale(0);
     opacity: 0; }
   .mainNav:hover .mainNav__openText {
-    -webkit-transform: rotateX(0deg) translateX(-50%);
-            transform: rotateX(0deg) translateX(-50%); }
+    -webkit-transform: translateX(-50%) scale(1);
+        -ms-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+    opacity: 1; }
   .mainNav_active .mainNav__menuText,
   .mainNav_active .mainNav__openText {
+    -webkit-transform: translateX(-50%) scale(0);
+        -ms-transform: translateX(-50%) scale(0);
+            transform: translateX(-50%) scale(0);
+    opacity: 0; }
+  .mainNav_active .mainNav__closeText {
+    -webkit-transform: translateX(-50%) scale(1);
+        -ms-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1); }
+  .mainNav_active:hover .mainNav__openText {
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0);
     opacity: 0; }
-  .mainNav_active .mainNav__closeText {
-    -webkit-transform: rotateX(0deg) translateX(-50%);
-            transform: rotateX(0deg) translateX(-50%); }
   .mainNav__back {
     background: #f2f2f2;
     z-index: -1;
@@ -61,26 +69,14 @@ body {
             transform: rotateX(90deg);
     -webkit-transition: .6s ease-in;
     transition: .6s ease-in; }
-  .mainNav__text {
-    color: #000000;
-    text-transform: uppercase;
-    word-wrap: break-word;
-    -webkit-transition: .6s;
-    transition: .6s; }
-  .mainNav__openText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    -webkit-transform: rotateX(90deg) translateX(-50%);
-            transform: rotateX(90deg) translateX(-50%); }
-  .mainNav__closeText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    -webkit-transform: rotateX(90deg) translateX(-50%);
-            transform: rotateX(90deg) translateX(-50%); }
+  .mainNav__menuText {
+    -webkit-transform: translateX(-50%) scale(1);
+        -ms-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1); }
+  .mainNav__openText, .mainNav__closeText {
+    -webkit-transform: translateX(-50%) scale(0);
+        -ms-transform: translateX(-50%) scale(0);
+            transform: translateX(-50%) scale(0); }
 
 .burgerMenu {
   width: 35px;
@@ -457,3 +453,13 @@ body {
   bottom: 0;
   left: 0;
   right: 0; }
+
+.mainNav__openText, .mainNav__closeText, .mainNav__menuText {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  display: block;
+  color: #000000;
+  -webkit-transition: .6s;
+  transition: .6s;
+  text-transform: uppercase; }

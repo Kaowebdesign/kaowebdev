@@ -24,16 +24,21 @@
         opacity: 0;
     }
     &:hover .mainNav__openText {
-        transform: rotateX(0deg) translateX(-50%);
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
     }
     &_active {
         .mainNav__menuText,
         .mainNav__openText {
-            transform: scale(0);
+            transform: translateX(-50%) scale(0);
             opacity: 0;
         }
         .mainNav__closeText {
-            transform: rotateX(0deg) translateX(-50%);
+            transform: translateX(-50%) scale(1);
+        }
+        &:hover .mainNav__openText {
+            transform: scale(0);
+            opacity: 0;
         }
     }
     &__back {
@@ -46,25 +51,17 @@
     &__wrap {
         @extend %nullLink;
     }
-    &__text {
-        color: $basicBlack;
-        text-transform: uppercase;
-        word-wrap: break-word;
-        transition: .6s;
+    &__menuText {
+        transform: translateX(-50%) scale(1);
     }
-    &__openText {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: block;
-        transform: rotateX(90deg) translateX(-50%);
+    &__openText,
+    &__closeText,
+    &__menuText {
+        @extend %navText;
     }
+    &__openText,
     &__closeText {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: block;
-        transform: rotateX(90deg) translateX(-50%);
+        transform: translateX(-50%) scale(0);
     }
 }
 
